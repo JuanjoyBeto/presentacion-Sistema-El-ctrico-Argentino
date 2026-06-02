@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[7IA] TPGRUPO5 – Sistema Eléctrico Región Centro</title>
+<title>[7IA] TPGRUPO6 – Sistema Eléctrico Región Centro</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -25,8 +25,8 @@
   .dot.active { background:var(--gold); width:18px; border-radius:3px; }
 
   .slides-container { position:relative; width:100%; height:100vh; }
-  .slide { position:absolute; top:0; left:0; width:100%; height:100%; display:none; overflow:hidden; }
-  .slide.active { display:flex; }
+  .slide { position:absolute; top:0; left:0; width:100%; height:100vh; display:none; overflow:hidden; }
+  .slide.active { display:flex; flex-direction:column; }
 
   .slide-num { position:absolute; top:20px; right:24px; font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted); letter-spacing:2px; z-index:10; }
   .logo-badge { position:absolute; top:16px; left:20px; background:var(--gold); color:#000; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:11px; letter-spacing:1px; padding:4px 10px; border-radius:4px; z-index:10; }
@@ -34,7 +34,7 @@
   .circuit-bg { position:absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 80% 20%, rgba(245,197,24,0.06) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,196,180,0.05) 0%, transparent 50%); z-index:0; }
   .grid-lines { position:absolute; top:0; left:0; right:0; bottom:0; background-image: linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px); background-size:60px 60px; z-index:0; }
 
-  .slide-inner { position:relative; z-index:2; width:100%; height:100%; display:flex; flex-direction:column; }
+  .slide-inner { position:relative; z-index:2; width:100%; height:100vh; display:flex; flex-direction:column; overflow:hidden; }
   @keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
   .slide.active .slide-inner { animation:fadeIn 0.35s ease; }
 
@@ -58,7 +58,7 @@
   .slide-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(28px,4vw,46px); color:var(--white); text-transform:uppercase; line-height:1.0; }
   .slide-title span { color:var(--gold); }
   .title-line { width:60px; height:3px; background:var(--gold); margin-top:10px; border-radius:2px; }
-  .slide-body { flex:1; min-height:0; padding:20px 40px 80px; overflow-y:auto; display:flex; flex-direction:column; gap:16px; }
+  .slide-body { flex:1; height:0; min-height:0; padding:20px 40px 80px; overflow-y:auto; display:flex; flex-direction:column; gap:16px; }
   .slide-body::-webkit-scrollbar{width:4px} .slide-body::-webkit-scrollbar-track{background:transparent} .slide-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
 
   /* IMAGE SLIDE */
@@ -72,7 +72,7 @@
   .cards-2 { grid-template-columns:1fr 1fr; }
   .cards-3 { grid-template-columns:1fr 1fr 1fr; }
   .cards-4 { grid-template-columns:1fr 1fr 1fr 1fr; }
-  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; position:relative; overflow:hidden; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; position:relative; overflow:visible; }
   .card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:var(--gold); border-radius:4px 0 0 4px; }
   .card.teal::before{background:var(--teal)} .card.blue::before{background:var(--blue)} .card.red::before{background:var(--red)} .card.green::before{background:var(--green)} .card.purple::before{background:#9b59b6}
   .card-icon { font-size:24px; margin-bottom:8px; }
@@ -153,7 +153,7 @@
     <div class="cover-region-tag">⚡ Región 4 · Centro · Córdoba &amp; San Luis</div>
     <div class="cover-meta">
       <div class="cover-meta-item"><div class="cover-meta-label">Asignatura</div><div class="cover-meta-val">IMRSC</div></div>
-      <div class="cover-meta-item"><div class="cover-meta-label">Equipo</div><div class="cover-meta-val">N° 05</div></div>
+      <div class="cover-meta-item"><div class="cover-meta-label">Equipo</div><div class="cover-meta-val">N° 06</div></div>
       <div class="cover-meta-item"><div class="cover-meta-label">Curso</div><div class="cover-meta-val">7° Inf. A</div></div>
       <div class="cover-meta-item"><div class="cover-meta-label">Integrantes</div><div class="cover-meta-val">Bosio · Goyechea</div></div>
       <div class="cover-meta-item"><div class="cover-meta-label">Fecha</div><div class="cover-meta-val">1° de Junio 2025</div></div>
